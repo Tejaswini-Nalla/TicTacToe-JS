@@ -4,4 +4,11 @@ class Player {
         this.playerSymbol = symbol;
         this.playerMoves = playerMoves;
     }
+    get name() {
+        return this.playerName;
+    }
+}
+
+module.exports = {
+    Player
 }
