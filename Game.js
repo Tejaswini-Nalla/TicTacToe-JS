@@ -31,7 +31,6 @@ class Game {
                 this.playerAction(position);
                 this.currentPlayerIndex = this.changeCurrentPlayerIndex(this.currentPlayerIndex);
                 this.gameBoard.displayBoard();
-
             }
         }
     }
