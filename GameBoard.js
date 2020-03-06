@@ -12,7 +12,9 @@ class GameBoard {
     }
 
     displayBoard() {
-        console.log(this.gameBoard);
+        console.log(this.gameBoard.slice(0,3));
+        console.log(this.gameBoard.slice(3,6));
+        console.log(this.gameBoard.slice(6));
     }
 
     checkIsWinner(player) {

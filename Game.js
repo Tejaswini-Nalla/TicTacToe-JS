@@ -28,11 +28,11 @@ class Game {
     start() {
         while(!this.gameBoard.isGameOver) {
             if (!this.gameBoard.isBoardFilled()) {
+                this.gameBoard.displayBoard();
                 let playerName = this.players[this.currentPlayerIndex].playerName;
-                let position = prompt(playerName +"Enter the position");
+                let position = prompt(playerName +" Enter the position");
                 this.playerAction(position);
                 this.currentPlayerIndex = this.changeCurrentPlayerIndex(this.currentPlayerIndex);
-                this.gameBoard.displayBoard();
             }
             else {
                 console.log("Draw");
