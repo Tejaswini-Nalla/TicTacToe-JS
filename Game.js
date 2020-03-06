@@ -8,6 +8,7 @@ class Game {
     currentPlayerIndex = 0;
 
     changeCurrentPlayerIndex = (playerIndex) => 1 - playerIndex;
+
     isPositionEmpty = (position) => this.gameBoard.gameBoard[position] === "";
 
     playerTurn(position) {
@@ -27,10 +28,15 @@ class Game {
     start() {
         while(!this.gameBoard.isGameOver) {
             if (!this.gameBoard.isBoardFilled()) {
-                let position = prompt("Enter the position");
+                let playerName = this.players[this.currentPlayerIndex].playerName;
+                let position = prompt(playerName +"Enter the position");
                 this.playerAction(position);
                 this.currentPlayerIndex = this.changeCurrentPlayerIndex(this.currentPlayerIndex);
                 this.gameBoard.displayBoard();
+            }
+            else {
+                console.log("Draw");
+                this.gameBoard.changeGameState(this.gameBoard.isGameOver);
             }
         }
     }
