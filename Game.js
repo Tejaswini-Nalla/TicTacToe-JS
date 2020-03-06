@@ -12,6 +12,7 @@ class Game {
 
     playerTurn(position) {
         this.players[this.currentPlayerIndex].placeOnBoard(position, this.gameBoard);
+        this.gameBoard.checkIsWinner(this.players[this.currentPlayerIndex]);
     }
 
     playerAction(position) {
