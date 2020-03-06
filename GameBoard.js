@@ -8,6 +8,10 @@ class GameBoard {
     isBoardFilled(){
         return this.gameBoard.every(cell => cell !== '');
     }
+
+    displayBoard() {
+        console.log(this.gameBoard);
+    }
 }
 
 module.exports = {
