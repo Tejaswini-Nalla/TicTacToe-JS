@@ -6,7 +6,8 @@ class Player {
     }
 
     placeOnBoard(position, board) {
-        board.splice(position,1,this.playerSymbol);
+        board.gameBoard.splice(position,1,this.playerSymbol);
+        this.playerMoves.push(position);
     }
 }
 

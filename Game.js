@@ -7,12 +7,19 @@ class Game {
                 new player.Player("B","O",[])];
     currentPlayerIndex = 0;
 
-    changeCurrentPlayerIndex = () => this.currentPlayerIndex - 1;
+    changeCurrentPlayerIndex = (playerIndex) => 1 - playerIndex;
     isPositionEmpty = (position) => this.gameBoard.gameBoard[position] === "";
+
+    playerTurn(position) {
+        this.players[this.currentPlayerIndex].placeOnBoard(position, this.gameBoard);
+    }
 
     playerAction(position) {
         if(this.isPositionEmpty(position)) {
-            this.players[this.currentPlayerIndex].placeOnBoard()
+            this.playerTurn(position);
+        }
+        else {
+            console.log("Position filled, Give another position");
         }
     }
 
@@ -20,7 +27,9 @@ class Game {
         while(!this.gameBoard.isGameOver) {
             if (!this.gameBoard.isBoardFilled()) {
                 let position = prompt("Enter the position");
-                playerAction(position);
+                this.playerAction(position);
+                this.currentPlayerIndex = this.changeCurrentPlayerIndex(this.currentPlayerIndex);
+                this.gameBoard.displayBoard();
 
             }
         }
