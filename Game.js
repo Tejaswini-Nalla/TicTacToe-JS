@@ -36,7 +36,7 @@ class Game {
             }
             else {
                 console.log("Draw");
-                this.gameBoard.changeGameState(this.gameBoard.isGameOver);
+                this.gameBoard.isGameOver = true;
             }
         }
     }
