@@ -12,6 +12,16 @@ class GameBoard {
     displayBoard() {
         console.log(this.gameBoard);
     }
+
+    checkIsWinner(player) {
+        this.winPositions.some((positions) => {
+            let winCondition = positions.every((position) =>
+                                                player.playerMoves.includes(position));
+            if(winCondition) {
+                console.log(player.playerName + " Won");
+            }
+        });
+    }
 }
 
 module.exports = {
