@@ -4,8 +4,9 @@ class Player {
         this.playerSymbol = symbol;
         this.playerMoves = playerMoves;
     }
-    get name() {
-        return this.playerName;
+
+    placeOnBoard(position, board) {
+        board.splice(position,1,this.playerSymbol);
     }
 }
 
