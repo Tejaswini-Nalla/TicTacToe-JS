@@ -1,11 +1,10 @@
-let board = require('./GameBoard');
-let player = require('./Player');
 const prompt = require('prompt-sync')();
 class Game {
-    gameBoard = new board.GameBoard(['','','','','','','','',''], false);
-    players = [new player.Player("A","X",[]),
-                new player.Player("B","O",[])];
-    currentPlayerIndex = 0;
+    constructor(gameBoard, players){
+        this.currentPlayerIndex = 0;
+        this.gameBoard = gameBoard;
+        this.players = players;
+    }
 
     changeCurrentPlayerIndex = (playerIndex) => 1 - playerIndex;
 
