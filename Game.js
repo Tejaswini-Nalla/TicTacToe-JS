@@ -25,7 +25,7 @@ class Game {
     }
 
     start() {
-        while(!this.gameBoard.isGameOver) {
+        while(!this.gameBoard.isGameOver()) {
             if (!this.gameBoard.isBoardFilled()) {
                 this.gameBoard.displayBoard();
                 let playerName = this.players[this.currentPlayerIndex].playerName;
@@ -35,7 +35,7 @@ class Game {
             }
             else {
                 console.log("Draw");
-                this.gameBoard.isGameOver = true;
+                this.gameBoard.changeGameState();
             }
         }
     }
