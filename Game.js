@@ -24,13 +24,17 @@ class Game {
         }
     }
 
+    currentPlayerTurn(currentPlayerId) {
+        let playerName = this.players[currentPlayerId].playerName;
+        let position = prompt(playerName +" Enter the position");
+        this.playerAction(position);
+    }
+
     start() {
         while(!this.gameBoard.isGameOver()) {
             if (!this.gameBoard.isBoardFilled()) {
                 this.gameBoard.displayBoard();
-                let playerName = this.players[this.currentPlayerIndex].playerName;
-                let position = prompt(playerName +" Enter the position");
-                this.playerAction(position);
+                this.currentPlayerTurn(this.currentPlayerIndex);
                 this.currentPlayerIndex = this.changeCurrentPlayerIndex(this.currentPlayerIndex);
             }
             else {
