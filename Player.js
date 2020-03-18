@@ -5,12 +5,11 @@ class Player {
         this.playerMoves = playerMoves;
     }
 
-    placeOnBoard(position, board) {
+    placeSymbol(position, board) {
         board.gameBoard.splice(position,1,this.playerSymbol);
         this.playerMoves.push(position);
+        console.log(this.playerName+this.playerMoves);
+        document.getElementById("cell"+(position+1)).innerHTML = this.playerSymbol;
     }
 }
 
-module.exports = {
-    Player
-}

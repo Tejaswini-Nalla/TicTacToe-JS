@@ -1,9 +1,9 @@
 .game_name{
-    margin:30px auto 0px auto;
+    margin:30px auto 0px 0px;
     text-align:center;
     color:red;
     font-family:Arial;
-    font-size:xx-large;
+    font-size:40px;
 }
 
 .container{
@@ -19,8 +19,27 @@
     border:1px solid black;
     text-align: center;
     cursor:pointer;
+    text-size:20px;
 }
 
 .container .cell:hover{
     background-color:deepskyblue;
 }
+
+.current_player{
+    margin-top:20%;
+    margin-left:5%;
+    font-family:Arial;
+    font-size:20px;
+    float:left;
+}
+
+#display_winner{
+    margin-top: 20px;
+    font-family:Arial;
+    font-size:20px;
+    color:green;
+    float: left;
+
+}
+

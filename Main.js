@@ -1,11 +1,16 @@
-let main = require('./Game');
-let board = require('./GameBoard');
-let player = require('./Player');
-
-let gameBoard = new board.GameBoard(['','','','','','','','',''], false);
-let players = [new player.Player("A","X",[]),
-                new player.Player("B","O",[])];
-let game = new main.Game(gameBoard,players);
-
-game.start();
+function eventListener() {
+    let gameBoard = new GameBoard(['', '', '', '', '', '', '', '', ''], false);
+    let players = [new Player("A", "X", []),
+        new Player("B", "O", [])];
+    let game = new Game(gameBoard, players);
+    game.displayPlayerName();
+    createEventHandlers(game);
+}
+function createEventHandlers(game){
+    for(let cellNumber=1; cellNumber<=9; cellNumber++) {
+        document.getElementById("cell"+cellNumber).addEventListener("click",
+                                function(){game.handleEvent(cellNumber)},{once:true});
+    }
+}
+window.onload = eventListener;
 
