@@ -1,0 +1,26 @@
+.game_name{
+    margin:30px auto 0px auto;
+    text-align:center;
+    color:red;
+    font-family:Arial;
+    font-size:xx-large;
+}
+
+.container{
+    width:310px;
+    overflow: hidden;
+    margin:50px auto 0px auto;
+}
+
+.container .cell{
+    width:100px;
+    height:100px;
+    float:left;
+    border:1px solid black;
+    text-align: center;
+    cursor:pointer;
+}
+
+.container .cell:hover{
+    background-color:deepskyblue;
+}
