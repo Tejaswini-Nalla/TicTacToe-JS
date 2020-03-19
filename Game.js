@@ -33,9 +33,15 @@ class Game {
         let cellContent = document.getElementById("cell"+cell).innerHTML;
         return cellContent === "";
     }
+
     displayPlayerName() {
         document.getElementById("player").innerHTML = this.players[this.currentPlayerIndex].playerName;
     }
+
+    start(){
+        this.displayPlayerName();
+    }
+
 
 }
 

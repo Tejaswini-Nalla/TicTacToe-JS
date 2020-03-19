@@ -10,10 +10,12 @@ function eventListener() {
 function createEventHandlers(game, gameBoard){
     for(let cellNumber=1; cellNumber<=9; cellNumber++) {
         document.getElementById("cell"+cellNumber).addEventListener("click",
-                                function(){game.handleEvent(cellNumber)});
+            function(){game.handleEvent(cellNumber)});
     }
+
     document.getElementById("reset_button").addEventListener("click",
                                 function(){gameBoard.resetBoard()});
+
 }
 
 window.onload = eventListener;

@@ -2,50 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tic Tac Toe Game</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
-    <script src="./Main.js" charset="utf-8"></script>
-    <script src="./GameBoard.js" charset="utf-8"></script>
-    <script src="./Player.js" charset="utf-8"></script>
-    <script src="./Game.js" charset="utf-8"></script>
 </head>
 <body>
-
-    <div class="game_name">Tic Tac Toe</div>
-    <div class="container">
-        <div class="cell" id="cell1"></div>
-        <div class="cell" id="cell2"></div>
-        <div class="cell" id="cell3"></div>
-        <div class="cell" id="cell4"></div>
-        <div class="cell" id="cell5"></div>
-        <div class="cell" id="cell6"></div>
-        <div class="cell" id="cell7"></div>
-        <div class="cell" id="cell8"></div>
-        <div class="cell" id="cell9"></div>
-    </div>
-    <div class="current_player">
-        Current Player :&nbsp;<span id="player"></span>
-    </div>
-    <div id="display_messages" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="message_content"></div>
-        </div>
-    </div>
-    <script>
-        var modal = document.getElementById("display_messages");
-        var close_span = document.getElementsByClassName("close")[0];
-        close_span.onclick = function() {
-            modal.style.display = "none";
-            location.reload();
-        }
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                location.reload();
-            }
-        }
-    </script>
-    <button id="reset_button">Reset</button>
+    <img src="Images/Cover.jpg"><br>
+    <button class="button" id="start_button"
+            onclick="location.replace('file:///Users/ntejaswini/Desktop/Assignments/TicTacToe-JS/Home.html')">
+            Get Started</button>
 </body>
 </html>
