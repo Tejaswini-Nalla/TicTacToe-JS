@@ -1,34 +1,38 @@
 class GameBoard {
-    constructor(gameBoard, gameActive) {
+    constructor(gameBoard) {
         this.gameBoard = gameBoard;
-        this.gameActive = gameActive ;
-    }
-    winPositions = [[0,1,2],[3,4,5],[6,7,8],
-                    [0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-
-    changeGameState() {
-        this.gameActive = !this.gameActive;
-    }
-
-    isGameOver() {
-        return this.gameActive;
     }
 
     isBoardFilled(){
         return this.gameBoard.every(cell => cell !== '');
     }
 
-    checkIsWinner(player) {
-        console.log("entered");
-        this.winPositions.some((positions) => {
+    checkBoardFilled(){
+        if(this.isBoardFilled()) {
+           this.displayMessage("Draw");
+        }
+    }
+
+    displayMessage(messageContent) {
+        document.getElementById("message_content").
+            innerHTML = messageContent;
+        document.getElementById("player").style.display = "none";
+        document.getElementById("display_messages").style.display = "block";
+    }
+
+    checkIsWinner(player, winPositions) {
+        winPositions.some((positions) => {
             let winCondition = positions.every((position) =>
                                                 player.playerMoves.includes(position));
             if(winCondition) {
-                document.getElementById("display_winner").
-                    innerHTML = `Game Over, Player ${player.playerName} Won`;
-                this.gameState = true;
+                let winner_message = `Player ${player.playerName} Won`
+                this.displayMessage(winner_message);
             }
         });
+    }
+
+    resetBoard() {
+        location.reload();
     }
 }
 

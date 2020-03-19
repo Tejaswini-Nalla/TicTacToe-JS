@@ -7,16 +7,17 @@
 }
 
 .container{
-    width:310px;
+    width:400px;
     overflow: hidden;
     margin:50px auto 0px auto;
 }
 
 .container .cell{
     width:100px;
-    height:100px;
+    height:50px;
+    padding-top:20px;
     float:left;
-    border:1px solid black;
+    border:3px solid black;
     text-align: center;
     cursor:pointer;
     text-size:20px;
@@ -27,19 +28,57 @@
 }
 
 .current_player{
-    margin-top:20%;
-    margin-left:5%;
+
     font-family:Arial;
     font-size:20px;
-    float:left;
+    margin:20px auto 0px 40%;
+}
+#message_content{
+    font-family:Arial;
+    font-size:25px;
+    color:green;
+    margin:50px auto 0px 15px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding:20px;
+    border: 1px solid #888;
+    width :30%;
+    height:20%;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-#display_winner{
-    margin-top: 20px;
-    font-family:Arial;
-    font-size:20px;
-    color:green;
-    float: left;
-
+#reset_button{
+    padding:5px;
+    background-color: green;
+    color:white;
+    font-size:medium;
+    cursor:pointer;
+    margin:20px auto 0px 45%;
 }
 
