@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe Game</title>
+    <link rel = "stylesheet" type = "text/css" href = "../css/Style.css">
+    <script src = "../javascript/View.js" charset = "utf-8"></script>
+    <script src = "../javascript/GameBoard.js" charset = "utf-8"></script>
+    <script src = "../javascript/Player.js" charset = "utf-8"></script>
+    <script src = "../javascript/Game.js" charset = "utf-8"></script>
+    <script src = "../javascript/Main.js" charset = "utf-8"></script>
+</head>
+<body>
+
+    <div id="header">
+        <span id = "game-name">TIC TAC TOE</span><br>
+    </div>
+
+    <div id = "task-bar">
+        <button class = "task-buttons" onclick = startGame()>StartGame</button>
+        <button class = "task-buttons" id="reset_button">ResetGame</button>
+        <button class = "task-buttons" id="end_button">EndGame</button>
+        <button class = "task-buttons" onclick = displayRules()>Rules</button>
+    </div>
+
+    <div class = "modal" id = "rules">
+        <div class = "modal-content">
+            <span class = "close">&times;</span>
+            <fieldset>
+                <legend>Rules</legend>
+                <ul>
+                    <li>Play occurs on a 3 by 3 grid of 9 squares</li>
+                    <li>Two players take turns marking empty squares, the firts marking X's, the second O's</li>
+                    <li>A row is any three squares on the grid, ajacent diagonally, vertically or horizontally</li>
+                    <li>If any one player places three of the same marks in a row, the player wins.</li>
+                    <li>If the spaces are all filled and there is no winner, the game ends in a draw.</li>
+                </ul>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-3">
+            <div class="scoreBoard">
+                <span id="heading">Score Board</span>
+                <table id="scoreTable">
+                    <tr>
+                        <th>Round</th>
+                        <th>Player1</th>
+                        <th>Player2</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-6">
+           <div class="row">
+               <div class="gameBoard">
+                   <div class="cell" id="cell0"></div>
+                   <div class="cell" id="cell1"></div>
+                   <div class="cell" id="cell2"></div>
+                   <div class="cell" id="cell3"></div>
+                   <div class="cell" id="cell4"></div>
+                   <div class="cell" id="cell5"></div>
+                   <div class="cell" id="cell6"></div>
+                   <div class="cell" id="cell7"></div>
+                   <div class="cell" id="cell8"></div>
+               </div>
+           </div>
+            <div class="row">
+                <span id="player1" class="player">
+                    player 1
+                </span>
+                <span id="player2" class="player">
+                    player 2
+                </span>
+            </div>
+            <div id="display_messages" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="message_content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

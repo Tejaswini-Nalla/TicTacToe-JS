@@ -9,7 +9,8 @@ img {
     text-align:center;
     color:red;
     font-family:Arial;
-    font-size:40px;
+    font-size:45px;
+    text-shadow: 3px 3px 4px black;
 }
 
 .col-3{
@@ -35,7 +36,8 @@ img {
     border:3px solid black;
     text-align: center;
     cursor:pointer;
-    text-size:20px;
+    font-size:30px;
+    color:deepskyblue;
 }
 
 .cell:hover{
