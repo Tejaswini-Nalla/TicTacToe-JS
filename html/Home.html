@@ -20,12 +20,12 @@
         <button class = "task-buttons" onclick = startGame()>StartGame</button>
         <button class = "task-buttons" id="reset_button">ResetGame</button>
         <button class = "task-buttons" id="end_button">EndGame</button>
-        <button class = "task-buttons" onclick = displayRules()>Rules</button>
+        <button class = "task-buttons" onclick = displayRules()>Help</button>
     </div>
 
     <div class = "modal" id = "rules">
         <div class = "modal-content">
-            <span class = "close">&times;</span>
+            <span class = "close" onclick = closeRulesPopUp()>&times;</span>
             <fieldset>
                 <legend>Rules</legend>
                 <ul>
@@ -76,7 +76,7 @@
             </div>
             <div id="display_messages" class="modal">
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span class="close" onclick = closeMessagePopUp()>&times;</span>
                     <div id="message_content"></div>
                 </div>
             </div>
